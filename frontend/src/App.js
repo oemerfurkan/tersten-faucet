@@ -31,6 +31,16 @@ function App() {
     connectWallet();
   }, []);
 
+  const donate = async () => {
+    const result = await contract.totalDonation()
+    console.log(result)
+  }
+
+  return <>
+    <h1>{selectedAddress}</h1>
+    <button onClick={donate}>Deneme</button>
+  </>
+
 }
 
 export default App;
